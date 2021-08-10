@@ -112,7 +112,7 @@ reduce_lr = ReduceLROnPlateau(monitor='val_loss', factor=0.2, patience=1, min_lr
 early_stop = EarlyStopping(monitor='val_loss', min_delta=0, patience=2, verbose=0, mode='auto')
 
 
-history = model.fit(train_X, train_yOHE, epochs=50, validation_data = (test_X,test_yOHE))
+history = model.fit(train_X, train_yOHE, epochs=25, validation_data = (test_X,test_yOHE))
 
 
 model.summary()
